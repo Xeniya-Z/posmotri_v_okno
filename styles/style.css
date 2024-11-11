@@ -36,3 +36,183 @@ ul,
 ol {
   list-style: none;
 }
+
+.page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  width: 1140px;
+  gap: 32px;
+}
+/* класс для всех скрытых элементов формы
+ чтоб потом отрисовать заново */
+.visually-hidden {
+
+}
+
+/*СЕКЦИЯ с видео*/
+.result {
+
+}
+/*блок див с видео*/
+.result__video-container {
+  position: relative;
+  width: 711px;
+  height: 386px;
+  margin-bottom: 16px;
+}
+/*само видео*/
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/*форма поиска*/
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+/* объединенеие элементов формы 
+(один класс на город и время суток)*/
+.search-form__fieldset {
+
+}
+/* заголово формы поиска
+(один класс на город и время суток)*/
+.search-form__fieldset-title {
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+}
+/* метка формы поиска
+(один класс на город и время суток(все 3)) */
+.search-form__label {
+
+}
+/* текс формы поиска города и время суток(все 3)
+(видимо будет скрыт) */
+.search-form__label-text {
+
+}
+/* форма поиска инпут */
+.search-form__textfield {
+
+}
+/* блок див внутри объединения элементов формы для времени суток
+внутри которого элементы чекбокса для выбора времени суток
+ */
+.search-form__checkbox-list {
+
+}
+/* форма поиска чекбокс для времени сутов
+(есть доп класс визуали хиден */
+.search-form__checkbox {
+
+}
+/* спан после кождого чекбокса для времени суток
+видимо для создания новых стилей для галочек */
+.search-form__pseudo-checkbox {
+
+}
+/* обзий класс для кнопок */
+.button {
+
+}
+/* кнопка найти в форме города и времени суток */
+.search-form__submit-button {
+  align-self: start;
+}
+
+
+/*СЕКЦИЯ с карточками*/
+.content__details {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 26px;
+}
+
+/* главный заголовок */
+.title {
+  font-family: Oswald;
+  font-size: 75px;
+  font-weight: 700;
+  line-height: 70.5px;
+  text-underline-position: from-font;
+  text-transform: uppercase;
+}
+/* спан для заголовка */
+.content__accent {
+  color: #545050;
+}
+/* список карточек справа который */
+.content__list {
+  position: relative;
+  max-height: 298px;
+  overflow-y: auto;
+}
+/* дальше темплейты */
+/* темплейт с карточками */
+.cards-list-item-template {
+
+}
+/* элемент списка карточки(ли) */
+.content__list-item {
+
+}
+
+/* элемент списка карточки(ли) для отступов */
+.content__list-item:not(:last-child) {
+  margin-bottom: 32px;
+}
+/* ссылка внутри списка ли */
+.content__card-link {
+
+}
+/* артикл внутри ссылки */
+.content__video-card {
+display: flex;
+flex-direction: row;
+align-items: start;
+}
+/* див внутри артикл */
+.content__video-card-description-container {
+  flex-grow: 1;
+}
+/* заголовок внутри див */
+.content__video-card-title {
+
+}
+/* текст (р) внутри див */
+.content__video-card-description {
+
+}
+/* картинка внутри артикл */
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+}
+/* темплат с кнопкой внутри */
+.more-button-template {
+
+}
+/* класс специфичный для этой кнопки */
+.more-button {
+
+}
