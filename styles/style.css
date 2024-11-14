@@ -9,13 +9,13 @@ html {
 }
 
 .page {
-  inline-size: 1200px;
-  block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
 }
 
 h1,
@@ -37,35 +37,36 @@ ol {
   list-style: none;
 }
 
+/* класс для всех скрытых элементов формы
+ чтоб потом отрисовать заново */
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .page {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 800px;
+  align-items: center;
+  min-height: 800px;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   align-items: end;
-  width: 1140px;
   gap: 30px;
-}
-/* класс для всех скрытых элементов формы
- чтоб потом отрисовать заново */
-.visually-hidden {
-  position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
+  width: 1140px;
+  max-height: 534px;
 }
 
 /*СЕКЦИЯ с видео*/
 .result {
-
 }
 /*блок див с видео*/
 .result__video-container {
@@ -85,7 +86,6 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 /* объединенеие элементов формы 
 (один класс на город и время суток)*/
@@ -95,14 +95,9 @@ ol {
 /* заголово формы поиска
 (один класс на город и время суток)*/
 .search-form__fieldset-title {
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
   font-weight: 400;
+  font-size: 18px;
   line-height: 21.6px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  
 }
 /* метка формы поиска
 (один класс на город и время суток(все 3)) */
@@ -122,31 +117,25 @@ ol {
 }
 
 .search-form__label:has(.search-form__checkbox):hover {
-text-decoration-line: underline;
-text-decoration-style: solid;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
-}
-
-/* текс формы поиска города и время суток(все 3)
-(видимо будет скрыт) */
-.search-form__label-text {
-
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
 }
 /* форма поиска инпут */
 .search-form__textfield {
-  appearance: none;
   border: none;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
-  background-color: inherit;
-  inline-size: 225px;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 24px;
-  color: #FFFFFFB2;
   padding-left: 0;
+  color: #ffffffb2;
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  background-color: inherit;
+  appearance: none;
+  inline-size: 225px;
 }
 
 .search-form__textfield:focus {
@@ -157,17 +146,11 @@ text-decoration-skip-ink: none;
 внутри которого элементы чекбокса для выбора времени суток
  */
 .search-form__checkbox-list {
-display: flex;
-flex-direction: row;
-gap: 15px;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
 }
-/* форма поиска чекбокс для времени сутов
-(есть доп класс визуали хиден */
-.search-form__checkbox {
 
-}
-/* спан после кождого чекбокса для времени суток
-видимо для создания новых стилей для галочек */
 .search-form__pseudo-checkbox {
   display: flex;
   justify-content: center;
@@ -178,33 +161,30 @@ gap: 15px;
 }
 
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
-  content: '';
+  content: "";
   display: block;
   width: 15px;
   height: 15px;
   background-color: #fff;
 }
-/* обзий класс для кнопок */
+/* общий класс для кнопок */
 .button {
-  cursor: pointer;
-  background-color: transparent;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
+  border: 1px solid #fff;
+  color: inherit;
+  font-family: inherit;
   font-weight: 700;
+  font-size: 18px;
   line-height: 30px;
   text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  color: inherit;
-  border: 1px solid #fff;
-
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .button:hover {
   text-decoration-line: underline;
   text-decoration-style: solid;
-  text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  text-underline-position: from-font;
 }
 
 .button:active {
@@ -224,23 +204,22 @@ gap: 15px;
   align-self: end;
   width: 194px;
 }
-
 /*СЕКЦИЯ с карточками*/
 .content__details {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  justify-content: end;
+  gap: 26px;
   width: 100%;
-  gap: 26px; 
+  height: 100%;
 }
 
 /* главный заголовок */
 .title {
   font-family: Oswald;
-  font-size: 75px;
   font-weight: 700;
+  font-size: 75px;
   line-height: 70.5px;
-  text-underline-position: from-font;
   text-transform: uppercase;
 }
 /* спан для заголовка */
@@ -251,19 +230,9 @@ gap: 15px;
 .content__list {
   position: relative;
   max-height: 298px;
+  padding-right: 2px;
   overflow-y: auto;
-  margin: 0 2px 2px; /* добавлкен костыль чтоб на кнопке прифокусе была видна обводна, убрать и придумать другое решение*/
 }
-/* дальше темплейты */
-/* темплейт с карточками */
-.cards-list-item-template {
-
-}
-/* элемент списка карточки(ли) */
-.content__list-item {
-
-}
-
 /* элемент списка карточки(ли) для отступов */
 .content__list-item:not(:last-child) {
   margin-bottom: 32px;
@@ -271,57 +240,71 @@ gap: 15px;
 /* ссылка внутри списка ли */
 .content__card-link {
   display: block; /*  добавлено чтоб был фон в активном состоянии*/
-  text-decoration: none;
+  margin: 2px;
   color: inherit;
+  text-decoration: none;
 }
 .content__card-link_current {
   background-color: #545050;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: none;
+  text-underline-position: from-font;
+}
+
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 /* артикл внутри ссылки */
 .content__video-card {
-display: flex;
-flex-direction: row;
-align-items: start;
-justify-content: start;
-height: 107px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  height: 107px;
 }
 /* див внутри артикл */
 .content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
+  gap: 6px;
 }
 /* заголовок внутри див */
 .content__video-card-title {
+  padding-top: 2px;
   font-family: Oswald;
-  font-size: 30px;
   font-weight: 700;
-  line-height: 36px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
+  font-size: 30px;
+  line-height: 30px;
   text-transform: uppercase;
 }
 /* текст (р) внутри див */
 .content__video-card-description {
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
   font-weight: 400;
-  line-height: 19px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  
+  font-size: 18px;
+  line-height: 16.2px;
 }
 /* картинка внутри артикл */
 .content__video-card-thumbnail {
+  align-self: center;
   width: 194px;
   height: 103px;
   object-fit: cover;
-  align-self: center;
-}
-/* темплат с кнопкой внутри */
-.more-button-template {
-
 }
 /* класс специфичный для этой кнопки */
 .more-button {
