@@ -62,11 +62,6 @@ ol {
   align-items: end;
   gap: 30px;
   width: 1140px;
-  max-height: 534px;
-}
-
-/*СЕКЦИЯ с видео*/
-.result {
 }
 /*блок див с видео*/
 .result__video-container {
@@ -169,12 +164,13 @@ ol {
 }
 /* общий класс для кнопок */
 .button {
+  min-height: 34px;
   border: 1px solid #fff;
   color: inherit;
   font-family: inherit;
   font-weight: 700;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 21.6px;
   text-align: center;
   background-color: transparent;
   cursor: pointer;
@@ -275,7 +271,7 @@ ol {
   flex-direction: row;
   justify-content: start;
   align-items: start;
-  height: 107px;
+  min-height: 107px;
 }
 /* див внутри артикл */
 .content__video-card-description-container {
