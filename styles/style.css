@@ -51,7 +51,6 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* min-height: 800px;*/ /* это надо удалить и придумать чем заменить*/
 }
 
 .content {
@@ -190,7 +189,7 @@ ol {
 
 .search-form__submit-button {
   align-self: end;
-  min-width: 194px; /*вместо фиксированной сделала минимальную*/
+  min-width: 194px;
 }
 
 .content__details {
@@ -203,7 +202,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald, Arial, sans-serif; /*везде где этот шрифт добавить Arial, sans-serif*/
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
@@ -235,13 +234,13 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link:hover { /* толщину подчркивания поправить*/
+.content__card-link:hover {
   text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 6%;
   text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
   text-underline-position: from-font;
-  text-decoration-style: solid; /* это просто с фигмы добавила*/
-  text-decoration-thickness: 6%; /* добавила толщину*/
-  text-underline-offset: 1px; /* добавила расстояние*/
 }
 
 .content__card-link:active {
@@ -261,34 +260,33 @@ ol {
   display: flex;
   flex-direction: row;
   justify-content: start;
- /* min-height: 107px; */ /* убрать сказали */
-  padding: 2px 0 2px 1px; /* добавила чтоб отсутпы у картинки соответствовали макету*/
+  padding: 2px 0 2px 1px;
 }
 
 .content__video-card-description-container {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  max-width: 200px; /* добавлено чтобы блок не растягивался вширь при переполнении и удалила гап*/
+  max-width: 200px;
 }
-/* а еще Также обратите внимание на обертку в которую вложен данный заголовок*/
-.content__video-card-title { /* сюда добавить эту связку text-overflow: ellipsis; white-space: nowrap; overflow: hidden;*/
-  font-family: Oswald, Arial, sans-serif; /*везде где этот шрифт добавить Arial, sans-serif*/
+
+.content__video-card-title {
+  padding-bottom: 4px;
+  overflow: hidden;
+  font-family: Oswald, Arial, sans-serif;
   font-weight: 700;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  text-overflow: ellipsis; /* добавила согласно комментрию*/
-  white-space: nowrap; /* добавила согласно комментрию*/
-  overflow: hidden; /* добавила согласно комментрию*/
-  padding-bottom: 4px; /* добавила чтобы подчеркивание при наведении не пряталось */
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
+  overflow-wrap: break-word;
   font-weight: 400;
   font-size: 18px;
   line-height: 16.2px;
-  overflow-wrap: break-word; /* добавила чтоб текст не вылезал а раздувал свой блок*/
 }
 
 .content__video-card-thumbnail {
