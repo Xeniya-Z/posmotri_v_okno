@@ -51,7 +51,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  /*min-height: 800px;*/ /* это надо удалить и придумать чем заменить*/
+  /* min-height: 800px;*/ /* это надо удалить и придумать чем заменить*/
 }
 
 .content {
@@ -187,10 +187,10 @@ ol {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
-/* доделать ширну кнопки*/
+
 .search-form__submit-button {
   align-self: end;
-  width: 194px; /*сказали что то с этим сделать а я е сделала потому что не знаю как*/
+  min-width: 194px; /*вместо фиксированной сделала минимальную*/
 }
 
 .content__details {
@@ -240,7 +240,8 @@ ol {
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
   text-decoration-style: solid; /* это просто с фигмы добавила*/
-  text-decoration-thickness: from-font; /* добавила чтоб толщина линии была от шрифта*/
+  text-decoration-thickness: 6%; /* добавила толщину*/
+  text-underline-offset: 1px; /* добавила расстояние*/
 }
 
 .content__card-link:active {
@@ -268,19 +269,19 @@ ol {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 6px;
-  max-width: 200px; /* добавлено чтобы блок не растягивался вширь при перепмолнении*/
+  max-width: 200px; /* добавлено чтобы блок не растягивался вширь при переполнении и удалила гап*/
 }
 /* а еще Также обратите внимание на обертку в которую вложен данный заголовок*/
 .content__video-card-title { /* сюда добавить эту связку text-overflow: ellipsis; white-space: nowrap; overflow: hidden;*/
   font-family: Oswald, Arial, sans-serif; /*везде где этот шрифт добавить Arial, sans-serif*/
   font-weight: 700;
   font-size: 30px;
-  line-height: 32px; /* увеличина на 2px чтоб подчеркивание у заголовка было видно при наведении*/
+  line-height: 30px;
   text-transform: uppercase;
-  text-overflow: ellipsis; /* добавила согласно комментрию ревьюера*/
-  white-space: nowrap; /* добавила согласно комментрию ревьюера*/
-  overflow: hidden; /* добавила согласно комментрию ревьюера*/
+  text-overflow: ellipsis; /* добавила согласно комментрию*/
+  white-space: nowrap; /* добавила согласно комментрию*/
+  overflow: hidden; /* добавила согласно комментрию*/
+  padding-bottom: 4px; /* добавила чтобы подчеркивание при наведении не пряталось */
 }
 
 .content__video-card-description {
